@@ -975,9 +975,9 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
 cquant-web@*:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/cquant-web/-/cquant-web-0.1.2.tgz#9829a9c5b229c8976695f7c63db6a217a5559fb8"
-  integrity sha512-6vpxIQplfDpHjwe2eUGobIcb5enSpax5tc3DzwtqKuLk2kyVQdi8MpOVdZRZZw3vaT/nnuZUP3CL2ZS4mL3yhg==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/cquant-web/-/cquant-web-0.1.4.tgz#5b2d8a6331ba345f50213f311072617142fa82a3"
+  integrity sha512-5Ppa+JyR74H0b2pQOdNRFLcs8TZwNzPoBWmOfrLy5WSIESKNywRrBRhA38GhEF2NN3wvqAifuY1dfdGX56QS1w==
 
 create-ecdh@^4.0.0:
   version "4.0.3"

@@ -31,27 +31,24 @@
 </head>
 
 <body>
-    <img src="https://picsum.photos/id/482/1920/1080" class="img" />
+    <img src="https://picsum.photos/1920/1080" class="img" crossorigin="anonymous" />
     <div class="block-container"></div>
 </body>
 
 <script>
     let img = document.querySelector('.img')
-    img.crossOrigin = "Anonymous";
-    img.onload = () => {
-        var cQuant = new CQuant.default("https://rawgit.com/xVanTuring/cquant-web/master/dist/cquant.wasm", true)
-        cQuant.palette("https://picsum.photos/id/482/1920/1080", 10).then((result) => {
-            console.log(result)
-            let container = document.querySelector(".block-container")
-            for (let item of result) {
-                let box = document.createElement('div')
-                box.className = "box"
-                box.style.backgroundColor = `rgb(${item.red},${item.green},${item.blue})`
-                container.appendChild(box)
+    var cQuant = new CQuant.default("https://rawgit.com/xVanTuring/cquant-web/master/dist/cquant.wasm", true)
+    cQuant.palette(img, 5).then((result) => {
+        console.log(result)
+        let container = document.querySelector(".block-container")
+        for (let item of result) {
+            let box = document.createElement('div')
+            box.className = "box"
+            box.style.backgroundColor = `rgb(${item.red},${item.green},${item.blue})`
+            container.appendChild(box)
 
-            }
-        })
-    }
+        }
+    })
 </script>
 
 </html>

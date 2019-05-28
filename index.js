@@ -1,7 +1,9 @@
 import CQuant from 'cquant-web'
 import WASM from "cQuantWASM"
 let cquant = new CQuant(WASM, true)
-cquant.palette("https://picsum.photos/id/482/1920/1080", 10).then((result) => {
+// make sure you add crossorigin="anonymous" to the img
+let img = document.querySelector('.img')
+cquant.palette(img, 5).then((result) => {
     let container = document.querySelector(".block-container")
     for (let item of result) {
         let box = document.createElement('div')
