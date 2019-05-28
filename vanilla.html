@@ -7,16 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://rawgit.com/xVanTuring/cquant-web/master/dist/index.js">
     </script>
-    <title>Document</title>
+    <title>Vanilla</title>
     <style>
         .img {
             width: 500px;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .title {
+            font-size: 300%;
+            margin-bottom: 40px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 
 <body>
     <img src="https://picsum.photos/id/482/1920/1080" class="img" />
+    <div class="block-container"></div>
 </body>
 
 <script>
@@ -26,6 +42,14 @@
         var cQuant = new CQuant.default("https://rawgit.com/xVanTuring/cquant-web/master/dist/cquant.wasm", true)
         cQuant.palette("https://picsum.photos/id/482/1920/1080", 10).then((result) => {
             console.log(result)
+            let container = document.querySelector(".block-container")
+            for (let item of result) {
+                let box = document.createElement('div')
+                box.className = "box"
+                box.style.backgroundColor = `rgb(${item.red},${item.green},${item.blue})`
+                container.appendChild(box)
+
+            }
         })
     }
 </script>
