@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "serve": "simplehttpserver --mime.Application/wasm=wasm --port=8081 ./dist"
+    "serve": "simplehttpserver --mime.Application/wasm=wasm --port=8081 ./dist",
+    "serve:v": "simplehttpserver --mime.Application/wasm=wasm --port=8081 ."
   },
   "keywords": [],
   "author": "",

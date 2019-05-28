@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://rawgit.com/xVanTuring/cquant-web/master/dist/index.js">
+    </script>
+    <title>Document</title>
+    <style>
+        .img {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://picsum.photos/id/482/1920/1080" class="img" />
+</body>
+
+<script>
+    let img = document.querySelector('.img')
+    img.crossOrigin = "Anonymous";
+    img.onload = () => {
+        var cQuant = new CQuant.default("https://rawgit.com/xVanTuring/cquant-web/master/dist/cquant.wasm", true)
+        cQuant.palette("https://picsum.photos/id/482/1920/1080", 10).then((result) => {
+            console.log(result)
+        })
+    }
+</script>
+
+</html>
